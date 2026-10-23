@@ -1,4 +1,4 @@
-# Task Router — Engineering Assessment Prototype
+#   Engineering Assessment Prototype
 
 A small full-stack task routing application built with FastAPI, SQLite, and vanilla JavaScript. It is an assessment prototype, not a production-ready service.
 
