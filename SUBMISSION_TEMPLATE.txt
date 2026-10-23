@@ -1,0 +1,18 @@
+Repository: <your repository link>
+Walkthrough video: <your Loom link, maximum 10 minutes>
+
+Agent setup:
+<AI coding tool/model, editor, relevant project instructions>
+
+Session map:
+- Initial planning/decomposition: <actual session and where>
+- Most important correction/change of direction: <actual session and where>
+- Final testing and verification: <actual session and where>
+
+Intentional omissions:
+- <what you deliberately left out and why>
+
+Testing performed:
+- <commands run and scenarios verified>
+
+Important: attach real project-specific AI-agent session exports. Remove credentials, tokens, personal information, unrelated conversations, and local filesystem details before uploading.

@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Task Router</title><link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header><div><div class="eyebrow">OPERATIONS CONSOLE</div><h1>Task Router</h1><p>Route work to contributors with matching expertise.</p></div><span class="pill">Local demo</span></header>
+<main>
+<section class="stats" id="stats"></section>
+<section class="panel">
+<div class="panel-head"><div><h2>Create a task</h2><p>Routing runs asynchronously and may take 5–20 seconds.</p></div></div>
+<form id="task-form">
+<label>Task title<input name="title" required minlength="2" maxlength="120" placeholder="e.g. Review monthly expense data"></label>
+<label>Description<textarea name="description" rows="2" placeholder="Optional context"></textarea></label>
+<div class="form-row"><label>Required expertise<input name="expertise" required placeholder="data analysis"></label>
+<label>Priority<select name="priority"><option>normal</option><option>low</option><option>high</option><option>urgent</option></select></label></div>
+<button type="submit">Create & route task</button><span id="form-message" role="status"></span>
+</form>
+</section>
+<section class="panel">
+<div class="panel-head"><div><h2>Tasks</h2><p>Refresh to see asynchronous routing updates.</p></div><button class="secondary" id="refresh">Refresh</button></div>
+<div class="table-wrap"><table><thead><tr><th>Task</th><th>Expertise</th><th>Assignee</th><th>Status</th><th>Created</th><th>Actions</th></tr></thead><tbody id="tasks"></tbody></table></div>
+</section>
+<section class="panel">
+<div class="panel-head"><div><h2>Contributors</h2><p>Expertise is comma-separated. Add contributors to test routing.</p></div></div>
+<form id="contributor-form" class="inline-form"><input name="name" required placeholder="Contributor name"><input name="expertise" required placeholder="finance, operations"><button type="submit">Add contributor</button></form>
+<div id="contributors" class="chips"></div>
+</section>
+<section class="panel" id="details-panel" hidden><div class="panel-head"><div><h2 id="detail-title">Task history</h2><p>Assignment history and audit events</p></div><button class="secondary" id="close-details">Close</button></div><div id="details"></div></section>
+</main>
+<footer>Task Router · Assessment prototype · Data is stored locally in SQLite.</footer>
+<script src="/static/app.js"></script>
+</body></html>
